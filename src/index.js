@@ -21,6 +21,18 @@ class HistoryRouter extends React.Component {
     });
   }
 
+  makeRelativePath(previousPath, path) {
+    if (path.charAt(0) !== '/') {
+      let prefix = previousPath;
+      if (prefix.charAt(prefix.length - 1) !== '/') {
+        prefix = prefix + '/';
+      }
+      path = prefix + path;
+    }
+
+    return path;
+  }
+
   componentWillReceiveProps(nextProps) {
     let { previousPath, path, isBack } = nextProps;
     let method =
@@ -28,6 +40,7 @@ class HistoryRouter extends React.Component {
         ? 'replace'
         : 'push';
 
+    path = this.makeRelativePath(previousPath, path);
     history[method + 'State']({ previousPath, path }, null, path);
   }
 

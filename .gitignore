@@ -30,6 +30,6 @@ build/Release
 node_modules
 
 # Ignore build files
-public
+lib
 data
 flow-typed/npm

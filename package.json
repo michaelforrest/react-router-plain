@@ -1,6 +1,6 @@
 {
   "name": "react-router-plain",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description":
     "This is a React-Router alternative. A very easy-to-use router, integrated with Redux.",
   "main": "lib/index.js",
