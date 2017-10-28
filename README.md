@@ -50,7 +50,7 @@ ReactDOM.render(<App />, document.querySelector('#root'));
 
 Don't forget add a reducer:
 
-* not a full example, just add historyRouter into your combineReducers: *
+* not a full example, just add historyRouter into your combineReducers:
 
 ```
 createStore(
