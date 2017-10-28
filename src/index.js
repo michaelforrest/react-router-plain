@@ -13,7 +13,7 @@ class HistoryRouter extends React.Component {
     return null;
   }
 
-  componentDidMount() {
+  componentWillMount() {
     let { pathname } = window === undefined ? this.props : location;
     changePath(pathname);
 
