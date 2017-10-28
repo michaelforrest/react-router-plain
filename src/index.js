@@ -14,7 +14,8 @@ class HistoryRouter extends React.Component {
   }
 
   componentDidMount() {
-    changePath(location.pathname);
+    let { pathname } = window === undefined ? this.props : location;
+    changePath(pathname);
 
     window.addEventListener('popstate', ({ state }) => {
       _dispatch(backButtonClick({ ...state, isBack: true }));
@@ -36,7 +37,6 @@ class HistoryRouter extends React.Component {
       return false;
     }
     return p1 === p2;
-    //return p1.split('/')[1] === p2.split('/')[1];
   }
 }
 
