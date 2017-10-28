@@ -1,6 +1,6 @@
 {
   "name": "react-router-plain",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description":
     "This is a React-Router alternative. A very easy-to-use router, integrated with Redux.",
   "main": "lib/index.js",
@@ -30,5 +30,7 @@
     "start": "babel -s inline -d lib -w src",
     "build": "babel -s inline -d lib src",
     "prepublish": "npm test && npm run build"
-  }
+  },
+  "tags": ["react", "redux"],
+  "keywords": ["react", "router", "route", "routing", "history", "link"]
 }
