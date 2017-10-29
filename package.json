@@ -1,7 +1,7 @@
 {
   "name": "react-router-plain",
   "repository": "https://github.com/alexpermyakov/react-router-plain",
-  "version": "1.2.1",
+  "version": "1.2.4",
   "description":
     "This is a React-Router alternative. A very easy-to-use router, integrated with Redux.",
   "main": "lib/index.js",

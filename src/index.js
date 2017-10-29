@@ -14,7 +14,13 @@ class HistoryRouter extends React.Component {
   }
 
   componentWillMount() {
-    let { pathname } = typeof window === 'undefined' ? this.props : location;
+    if (typeof window === 'undefined') {
+      global.plain__pathname__ = this.props.pathname;
+    }
+  }
+
+  componentDidMount() {
+    let { pathname } = location;
     changePath(pathname);
 
     window.addEventListener('popstate', ({ state }) => {

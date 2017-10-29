@@ -23,9 +23,10 @@ const buildComponent = (el, urlPath) => {
 
 export default connect((state, props) => {
   let { path = '' } = state.historyRouter;
+
   return {
     ...props,
     renderPath: props.path,
-    urlPath: path
+    urlPath: global.plain__pathname__ || path
   };
 })(HistoryRoute);
