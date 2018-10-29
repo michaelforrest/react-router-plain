@@ -29,13 +29,14 @@ class HistoryRouter extends React.Component {
   }
 
   componentWillReceiveProps(nextProps) {
+    const { history } = this.props;
     let { previousPath, path, isBack } = nextProps;
     let method =
       !previousPath || isBack || this.isSameUrlPattern(previousPath, path)
-        ? 'replace'
-        : 'push';
+        ? history.replace
+        : history.push
 
-    history[method + 'State']({ previousPath, path }, null, path);
+    method({ previousPath, path }, null, path);
   }
 
   isSameUrlPattern(p1, p2) {
