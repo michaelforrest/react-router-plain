@@ -36,7 +36,7 @@ class HistoryRouter extends React.Component {
         ? history.replace
         : history.push
 
-    method({ previousPath, path }, null, path);
+    method({ previousPath, pathname: path });
   }
 
   isSameUrlPattern(p1, p2) {
